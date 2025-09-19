@@ -1,194 +1,182 @@
-## **1\. Вступ**
+## **1\. Introduction**
 
-### **1.1 Мета**
+### **1.1 Purpose**
 
-Цей документ описує функціональні та нефункціональні вимоги для веб\-додатку “Система управління коворкінгом**”**, який дозволяє ефективно керувати простором, бронюванням робочих місць та послугами для клієнтів.
+This document describes the functional and non-functional requirements for the web application “Coworking Management System”, which enables efficient management of space, workplace bookings, and services for clients.
 
-### **1.2 Область застосування**
+### **1.2 Scope**
 
-Система призначена для адміністраторів коворкінгів, співробітників та клієнтів. Вона дозволяє бронювати робочі місця, керувати доступом, переглядати доступні послуги, а також відстежувати зайнятість та статистику.
+The system is intended for coworking administrators, staff, and clients. It allows booking workspaces, managing access, viewing available services, and monitoring occupancy and statistics.
 
-## **2\. Загальний опис**
+## **2\. General Description**
 
-### **2.1 Перспектива продукту**
+### **2.1 Product Perspective**
 
-Система буде веб\-додатком із зручним інтерфейсом та інтеграцією з календарями (Google Calendar, Outlook) для синхронізації бронювань. Система повинна підтримувати адміністрування приміщень, робочих місць та користувачів.
+The system will be a web application with a user-friendly interface and integration with calendars (Google Calendar, Outlook) for booking synchronization. The system must support administration of premises, workplaces, and users.
 
-### **2.2 Функції продукту**
+### **2.2 Product Functions**
 
-- Реєстрація та аутентифікація користувачів (адміністраторів і клієнтів).
-- Бронювання робочих місць та кімнат для зустрічей.
-- Перегляд доступних місць у реальному часі.
-- Управління послугами та ресурсами (Wi-Fi, принтери, кавові машини).
-- Генерація звітів щодо зайнятості та використання ресурсів.
+* User registration and authentication (administrators and clients).  
+* Booking of workplaces and meeting rooms.  
+* Viewing available spaces in real time.  
+* Management of services and resources (Wi-Fi, printers, coffee machines).  
+* Generation of reports on occupancy and resource usage.
 
-### **2.3 Характеристики користувачів**
+### **2.3 User Characteristics**
 
-- **Адміністратори**: керують доступом, бронюванням, статистикою та ресурсами.
-- **Клієнти**: бронюють робочі місця та кімнати, переглядають доступні послуги.
+* **Administrators**: manage access, bookings, statistics, and resources.  
+* **Clients**: book workspaces and rooms, view available services.
 
-### **2.4 Обмеження**
+### **2.4 Constraints**
 
-- Потрібне підключення до інтернету для синхронізації даних.
-- Сумісність із основними браузерами: Chrome, Firefox, Safari, Opera.
-- Обмежена кількість одночасних бронювань залежно від наявних робочих місць.
+* Internet connection is required for data synchronization.  
+* Compatibility with major browsers: Chrome, Firefox, Safari, Opera.  
+* Limited number of simultaneous bookings depending on available workspaces.
 
-## **3 Функціональні вимоги**
 
-### **3.1 Бронювання робочих місць та кімнат**
+## **3 Functional Requirements**
 
-**Вимога:** Користувачі повинні мати можливість бронювати доступні робочі місця та кімнати для зустрічей.  
-**Критерії прийняття:**
+### **3.1 Booking Workplaces and Rooms**
 
-- Веб-додаток показує доступні місця та кімнати у реальному часі.
-- Користувач може обирати дату, час та тривалість бронювання.
-- Після підтвердження бронювання система надсилає підтвердження на електронну пошту.
-- Заброньовані місця блокуються для інших користувачів.
+**Requirement:** Users must be able to book available workplaces and meeting rooms.  
+**Acceptance Criteria:**
 
-### **3.2 Перегляд зайнятості та послуг**
+* The web application displays available workplaces and rooms in real time.  
+* The user can select the date, time, and duration of the booking.  
+* After confirming a booking, the system sends a confirmation to the user’s email.  
+* Reserved workplaces are blocked for other users.
 
-**Вимога:** Користувачі повинні бачити, які місця та кімнати зайняті або вільні.  
-**Критерії прийняття:**
+### **3.2 Viewing Occupancy and Services**
 
-- Інтерактивна карта коворкінгу відображає зайнятість робочих місць.
-- Система повідомляє про наявність або відсутність необхідних послуг (Wi-Fi, принтери, кавові машини).
+**Requirement:** Users must be able to see which workplaces and rooms are occupied or available.  
+**Acceptance Criteria:**
 
-### **3.3 Управління користувачами та ресурсами**
+* An interactive coworking map displays workplace occupancy.  
+* The system informs about the availability or unavailability of required services (Wi-Fi, printers, coffee machines).
 
-**Вимога:** Адміністратори можуть керувати обліковими записами користувачів.  
-**Критерії прийняття:**
+### **3.3 User and Resource Management**
 
-- Адміністратор може відстежувати використання ресурсів у реальному часі.
-- Адміністратор може створювати, редагувати та видаляти облікові записи.
-- Користувачі отримують права доступу відповідно до ролі (клієнт/адміністратор).
+**Requirement:** Administrators can manage user accounts.  
+**Acceptance Criteria:**
 
-**3.4 Генерація звітів**
+* The administrator can monitor resource usage in real time.  
+* The administrator can create, edit, and delete user accounts.  
+* Users receive access rights according to their role (client/administrator).
 
-**Вимога:** Адміністратори повинні мати можливість отримувати статистику.  
-**Критерії прийняття:**
+**3.4 Report Generation**
 
-- Система логує зайнятість робочих місць, популярність кімнат та використання послуг.
-- Можливість експортувати звіти у форматі PDF або Excel.
-- Система оновлює звіти в реальному часі.
+**Requirement:** Administrators must be able to obtain statistics.  
+**Acceptance Criteria:**
 
-## **4\. Нефункціональні вимоги**
+* The system logs workplace occupancy, room popularity, and service usage.  
+* Reports can be exported in PDF or Excel format.  
+* The system updates reports in real time.
 
-### **4.1 Зручність**
+## **4\. Non-Functional Requirements**
 
-**Вимога:** Інтерфейс повинен бути інтуїтивно зрозумілим та легким у використанні.  
-**Критерії прийняття:**
+### **4.1 Usability**
 
-- Інтерфейс простий у навігації.
-- Час відгуку системи не перевищує 2 секунди для будь-якої операції.
+**Requirement:** The interface must be intuitive and easy to use.  
+**Acceptance Criteria:**
 
-### **4.2 Безпека**
+* The interface is simple to navigate.  
+* The system response time does not exceed 2 seconds for any operation.
 
-**Вимога:** Система повинна захищати дані користувачів.  
-**Критерії прийняття:**
+### **4.2 Security**
 
-- Дані користувачів зберігаються у зашифрованому вигляді.
-- Аутентифікація через надійний пароль або OAuth.
-- Дані не передаються без згоди користувача.
+**Requirement:** The system must protect user data.  
+**Acceptance Criteria:**
 
-### **4.3 Доступність**
+* User data is stored in encrypted form.  
+* Authentication via secure password or OAuth.  
+* Data is not transmitted without user consent.
 
-**Вимога:** Система повинна бути доступною у будь-який час.  
-**Критерії прийняття:**
+### **4.3 Availability**
 
-- Доступність сервісу ≥ 99%.
-- Система повинна підтримувати різні браузери (Chrome, Firefox, Safari, Opera).
-- Адаптивність для мобільних пристроїв.
+**Requirement:** The system must be available at all times.  
+**Acceptance Criteria:**
 
-### **4.4 Масштабованість**
+* Service availability ≥ 99%.  
+* The system must support major browsers (Chrome, Firefox, Safari, Opera).  
+* Adaptive design for mobile devices.
 
-**Вимога:** Система повинна підтримувати зростання навантаження.  
-**Критерії прийняття:**
+### **4.4 Scalability**
 
-- Можливість додавати нові приміщення та робочі місця без перебудови архітектури.
-- Підтримка одночасної роботи великої кількості користувачів.
+**Requirement:** The system must support increasing loads.  
+**Acceptance Criteria:**
 
-###
+* Ability to add new premises and workplaces without re-architecting the system.  
+* Support for simultaneous operation by a large number of users.
 
-## **5\. Архітектура системи**
+### 
 
-Система “Система управління коворкінгом” реалізована за принципом клієнт-серверної архітектури з трьома основними компонентами:
+## **5\. System Architecture**
 
-1. **Frontend (веб-клієнт)**
+The “Coworking Management System” is implemented using a client-server architecture with three main components:
 
-   - Реалізовано на React \+ TypeScript.
+**Frontend (web client):**
 
-   - Використовується адаптивний дизайн для мобільних пристроїв.
+* Implemented with React \+ TypeScript.  
+* Uses responsive design for mobile devices.  
+* Interacts with the backend via REST API.
 
-   - Взаємодіє з backend через REST API.
+**Backend (application server):**
 
-2. **Backend (сервер додатків)**
+* Implemented with Node.js using NestJS or Express.  
+* Responsible for booking logic, user and resource management, and report generation.  
+* Handles user authentication and authorization via JWT or OAuth2.
 
-   - Реалізовано на Node.js з NestJS або Express.
+**Database (DBMS):**
 
-   - Відповідає за логіку бронювання, управління користувачами, ресурсами та генерацію звітів.
+* PostgreSQL or MySQL is used to store data about users, bookings, rooms, resources, and statistics.  
+* ORM (Prisma or TypeORM) is used for database access.
 
-   - Здійснює аутентифікацію та авторизацію користувачів через JWT або OAuth2.
+**Integration Services:**
 
-3. **Database (СУБД)**
+* Google Calendar API and Outlook API for booking synchronization.  
+* Email Service for sending booking confirmations.
 
-   - PostgreSQL або MySQL для зберігання даних про користувачів, бронювання, кімнати, ресурси та статистику.
+## **6\. Technology Stack**
 
-   - Використовується ORM (Prisma або TypeORM) для доступу до бази даних.
+* **Frontend**: React, TypeScript, Tailwind CSS, Redux/Context API.
 
-4. **Integration Services (Сервіси інтеграцій)**
+* **Backend**: Node.js, NestJS/Express, REST API.
 
-   - Google Calendar API та Outlook API для синхронізації бронювань.
+* **Database**: PostgreSQL/MySQL, ORM (Prisma/TypeORM).
 
-   - Email Service для надсилання підтверджень бронювань.
+* **Authentication**: JWT, OAuth2 (Google Sign-In).
 
-## **6\. Технологічний стек**
+* **DevOps / CI-CD**: Docker, GitHub Actions for testing and deployment.
 
-- **Frontend**: React, TypeScript, Tailwind CSS, Redux/Context API.
+* **Testing**: Jest (unit), Cypress (E2E).
 
-- **Backend**: Node.js, NestJS/Express, REST API.
+## **7. Architectural Diagrams**
 
-- **Database**: PostgreSQL/MySQL, ORM (Prisma/TypeORM).
+* **Use Case Diagram**: illustrates user interaction scenarios with the system.
 
-- **Аутентифікація**: JWT, OAuth2 (Google Sign-In).
+![image](../diagrams/coworking_use_case_diagram.png)
 
-- **DevOps / CI-CD**: Docker, GitHub Actions для тестів і деплою.
+* **Component Diagram**: shows the interaction between the frontend, backend, database, and integration services.
 
-- **Тестування**: Jest (unit), Cypress (E2E).
+![image](../diagrams/coworking_component_diagram.png)
 
-## **7\. Архітектурні діаграми**
+* **Class Diagram**: models the main entities (User, Workspace, Room, Booking, Resource, Report).
 
-- **Use Case Diagram**: відображає сценарії взаємодії користувачів з системою.
+![image](../diagrams/coworking_class_diagram.png)
 
-![image](../diagrams/Coworking%20Management%20System.png)
+* **Sequence Diagrams**: key scenarios such as room booking and report generation by the administrator.
 
-- **Component Diagram**: показує взаємодію frontend, backend, database та інтеграційних сервісів.
+## **8\. Interfaces**
 
-![image](../diagrams/Backend.png)
+* **User Interface (UI)**: web client accessible via browser and mobile devices.  
+* **API Interface**: REST API for CRUD operations (users, bookings, resources, reports).  
+* **Integrations**: Google Calendar API, Outlook API, Email Service.  
+  ![image](../diagrams/coworking_sequence_diagram1.png)
+  ![image](../diagrams/coworking_sequence_diagram_2.png)
 
-- **Class Diagram**: моделі основних сутностей (User, Workspace, Room, Booking, Resource, Report).
+## **9\. Technical Constraints**
 
-![image](../../assets/srs_1.png)
-
-- **Sequence Diagrams**: основні сценарії: бронювання кімнати, генерація звіту адміністратором.
-
-## **8\. Інтерфейси**
-
-- **Користувацький інтерфейс (UI)**: веб\-клієнт, доступний з браузера та мобільних пристроїв.
-
-- **API інтерфейс**: REST API для CRUD-операцій (користувачі, бронювання, ресурси, звіти).
-
-- **Інтеграції**: Google Calendar API, Outlook API, Email Service.  
-  ![image](../../assets/srs_2.png)
-  ![image](../../assets/srs_3.png)
-
-## **9\. Технічні обмеження**
-
-- Мінімальні версії: Node.js 18+, PostgreSQL 15+.
-
-- Використання HTTPS для всіх запитів.
-
-- Обмеження на максимальну кількість одночасних сесій користувача.
-
-- Сумісність із браузерами: Chrome, Firefox, Safari, Opera.
-
-###
+* Minimum versions: Node.js 18+, PostgreSQL 15+.  
+* Use of HTTPS for all requests.  
+* Limitations on the maximum number of concurrent user sessions.  
+* Browser compatibility: Chrome, Firefox, Safari, Opera.
